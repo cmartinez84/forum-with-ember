@@ -6,11 +6,19 @@ body{
 }
 .starBox:hover .star{
     color: yellow;
+    text-shadow: 0 0 1px grey;
+
 }
 .star:hover .star{
     color: yellow;
+    text-shadow: 0 0 1px grey;
+
 }
 div .star:hover,
 div .star:hover ~ .star  {
   color: black;
+}
+.lit{
+  color: yellow;
+  text-shadow: 0 0 1px grey;
 }

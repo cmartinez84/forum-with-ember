@@ -5,6 +5,9 @@ export default Ember.Component.extend({
     addRating(question){
       var rating = this.get('rating');
       this.sendAction('addRating', question, rating)
+    },
+    click(question, rating){
+      this.sendAction('addRating', question, rating)
     }
   }
 });

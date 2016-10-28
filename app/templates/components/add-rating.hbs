@@ -1,2 +1,9 @@
   {{input value=rating id="rating" placeholder="enter a number"}}
   <button {{action "addRating" question}}>Submit Rating</button>
+  <div class="starBox">
+    <i value="" id="strange" class="fa fa-star star" aria-hidden="true" {{action "click" question 1}}></i>
+    <i value="" id="strange" class="fa fa-star star" aria-hidden="true" {{action "click" question 2}}></i>
+    <i value="" id="strange" class="fa fa-star star" aria-hidden="true" {{action "click" question 3}}></i>
+    <i value="" id="strange" class="fa fa-star star" aria-hidden="true" {{action "click" question 4}}></i>
+    <i value="" id="strange" class="fa fa-star star" aria-hidden="true" {{action "click" question 5}}></i>
+  </div>
