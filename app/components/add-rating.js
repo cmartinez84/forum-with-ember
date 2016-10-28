@@ -2,9 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-
-    addRating(question, rating){
-      this.sendAction('addRating', question, rating)
+    addRating(toRate, rating){
+      this.sendAction('addRating', toRate, rating)
     }
   }
 });
