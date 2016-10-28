@@ -1,9 +1,11 @@
 <div class="well">
     <li>{{comment.author}} on {{moment-from-now comment.date}}</li>
     <li>{{comment.content}}
+      <div class="" {{action "click" "yo"}}>
+        seperate
+      </div>
         <div class="starBox">
-            {{to-stars comment.rating }}
-
+            {{to-stars comment.rating}}
         </div>
 
     <button{{action "destroyComment" comment}}><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>
