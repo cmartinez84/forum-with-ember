@@ -1,9 +1,10 @@
 <div class="well">
     <li>{{comment.author}} on {{moment-from-now comment.date}}</li>
     <li>{{comment.content}}
-      <div class="" {{action "click" "yo"}}>
-        seperate
-      </div>
+    <div class="">
+      Average Raging: {{averageRating comment.rating}}
+    </div>
+
         <div class="starBox">
             {{to-stars comment.rating}}
         </div>
