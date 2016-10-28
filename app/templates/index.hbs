@@ -1,6 +1,6 @@
 {{new-question postQuestion="postQuestion"}}
 {{#each model.questions as |question|}}
-{{#link-to "question" question}}
+{{#link-to "question" question.id}}
     {{question-tile question=question}}
 {{/link-to}}
 {{/each}}
