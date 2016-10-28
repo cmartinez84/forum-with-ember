@@ -1,1 +1,3 @@
-{{yield}}
+<li>{{comment.author}} on {{comment.date}}</li>
+<li>{{comment.content}}
+<button{{action "destroyComment" comment}}><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>

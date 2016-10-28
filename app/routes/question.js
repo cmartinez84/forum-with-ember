@@ -17,6 +17,10 @@ export default Ember.Route.extend({
         });
         this.transitionTo("question");
     },
+    destroyComment(comment){
+        comment.destroyRecord();
+        this.transitionTo("question");
+    }
 
     }
 
