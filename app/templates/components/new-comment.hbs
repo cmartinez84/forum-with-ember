@@ -3,11 +3,10 @@
     <form >
         <label for="">Author</label>
         {{input value=author  id="author" class="form-control"}}
-        
+
         <label for="">Content</label>
         {{input value=content id="content" class="form-control"}}
-        <label for="">Rating</label>
-        {{input value=rating id="rating" class="form-control"}}
+      
     </form>
     <button  class="form-control btn btn-success" {{action "postComment" question}}>Comment!</button>
 </div>
