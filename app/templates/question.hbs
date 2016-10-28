@@ -4,8 +4,8 @@
     <p>by {{model.question.author}}</p>
     <p>on {{model.question.date}}</p>
     <p>{{model.question.content}}</p>
+    {{#each model.question.comments as |comment|}}
+        {{comment-tile comment=comment destroyComment="destroyComment"}}
+    {{/each}}
 </div>
 {{new-comment question=model.question postComment="postComment"}}
-{{#each model.question.comments as |comment|}}
-    {{comment-tile comment=comment destroyComment="destroyComment"}}
-{{/each}}
