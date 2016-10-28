@@ -1,2 +1,5 @@
 {{new-question postQuestion="postQuestion"}}
+{{#each model.questions as |question|}}
+    {{question-tile question=question}}
+{{/each}}
 new question?
