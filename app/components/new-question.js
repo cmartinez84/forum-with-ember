@@ -6,7 +6,7 @@ export default Ember.Component.extend({
             var params = {
                 author: this.get('author'),
                 title: this.get('title'),
-                date: this.get('date'),
+                date: moment().format('LLLL'),
                 content: this.get('content')
             };
             this.sendAction("postQuestion", params);

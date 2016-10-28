@@ -1,3 +1,3 @@
 {{#link-to "question" question.id}}
-    <li>{{question.title}} asked by {{question.author}}</li>
+    <li>{{question.title}} asked by {{question.author}} {{moment-from-now question.date}}</li>
 {{/link-to}}  <button {{action "destroyQuestion" question}}><i class="fa fa-trash-o" aria-hidden="true"></i></button>

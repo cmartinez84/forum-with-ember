@@ -6,7 +6,7 @@ export default Ember.Component.extend({
           var params = {
             author: this.get('author'),
             content: this.get('content'),
-            date: this.get('date'),
+            date: moment().format('LLLL'),
             rating: this.get('rating'),
             question: this.get('question')
           };
