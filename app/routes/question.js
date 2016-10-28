@@ -20,6 +20,11 @@ export default Ember.Route.extend({
     destroyComment(comment){
         comment.destroyRecord();
         this.transitionTo("question");
+    },
+    addRating(question, rating){
+      console.log(question);
+      question.get("rating").push(rating);
+      question.save();
     }
 }
 });

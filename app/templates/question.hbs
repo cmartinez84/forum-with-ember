@@ -1,4 +1,10 @@
 
+<div class="">
+  Average Rating
+  {{averageRating model.question.rating}}
+  {{add-rating question=model.question addRating="addRating"}}
+
+</div>
 <div class="well">
     <h1>{{model.question.title}}</h1>
     <p>by {{model.question.author}}</p>

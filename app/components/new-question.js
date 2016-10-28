@@ -7,7 +7,8 @@ export default Ember.Component.extend({
                 author: this.get('author'),
                 title: this.get('title'),
                 date: moment().format('LLLL'),
-                content: this.get('content')
+                content: this.get('content'),
+                rating: [0],
             };
             this.sendAction("postQuestion", params);
         }
