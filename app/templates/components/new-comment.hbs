@@ -5,8 +5,8 @@
         {{input value=author  id="author" class="form-control"}}
 
         <label for="">Content</label>
-        {{input value=content id="content" class="form-control"}}
-      
+        {{input value=content id="content" class="form-control" action="charCount" on="key-up"}}
+        <label class="red" for="">{{count}}</label><br>
     </form>
     <button  class="form-control btn btn-success" {{action "postComment" question}}>Comment!</button>
 </div>

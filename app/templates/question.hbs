@@ -13,20 +13,15 @@
     <div class="col-sm-3 postContent-author">
       <div class="panel">
         <img class="img-responsive avatar" src="{{model.question.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'/>
-        by  {{model.question.author}}
+        <h3> {{model.question.author}}</h3>
       </div>
 
     </div>
     <div class="col-sm-9 postContent-content">
         <p>{{model.question.content}}</p>
-      <p> Posted on {{model.question.date}}</p>
+      <p> Posted {{moment-from-now model.question.date}}</p>
     </div>
   </div>
-
-
-
-
-
 
 </div>
 {{#each model.question.comments as |comment|}}

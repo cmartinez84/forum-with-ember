@@ -10,7 +10,17 @@ export default Ember.Component.extend({
             question: this.get('question'),
           };
           this.sendAction('postComment', params);
-        }
+      },
+      charCount(){
+          var charCount = (this.get('content')).toString().length;
+          var output = "Characters: "
+          if(charCount > 500){
+              charCount += " too long! Your question must be under 500 characters";
+          }
+          output += charCount;
+          this.set("count", output);
+      }
+
     }
 
 });

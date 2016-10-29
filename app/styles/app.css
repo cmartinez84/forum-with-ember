@@ -44,8 +44,14 @@ div .star:hover ~ .star  {
   margin: 58px auto 20px;
 
 }
+
 .postContent-content{
-border-left: 1px solid black;
+/*border-left: 1px solid black;*/
+height: 100% !important;
+}
+.postContent-author{
+    height: 100%;
+    border-right: 1px solid black;
 }
 .avatar{
   max-height: 200px !important;
@@ -55,7 +61,10 @@ border-left: 1px solid black;
   bottom: 0;
   left: 0;
   padding-left: 20px;
+  border-top: 1px solid black;
+  width: 100%;
 }
 .wellFooter * {
   display: inline-block;
+
 }

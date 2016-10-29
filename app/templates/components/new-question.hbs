@@ -1,13 +1,16 @@
 <div class="well">
     <form class="" action="index.html" method="post">
         <label for="">Title:</label>
-        {{input value=title id="title" class="form-control"}}
+        {{input value=title id="title" class="form-control" required='required'}}
         <label for="">Author:</label>
         {{input value=author id="author" class="form-control"}}
         <label for="">Content:</label>
-        {{input value=content id="content" class="form-control"}}
+        {{input value=content id="content" class="form-control" action="charCount" on="key-up"}}
+        <label class="red" for="">{{count}}</label><br>
         <label for="">Avatar:</label>
         {{input value=avatar id="avatar" class="form-control" placeholder="optional"}}
+
         <button {{action "postQuestion"}}  class="form-control btn btn-success">Ask!</button>
     </form>
 </div>
+Total Characters: {{count}}
