@@ -68,3 +68,12 @@ height: 100% !important;
   display: inline-block;
 
 }
+button.delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.well:hover button.delete{
+    display: inline-block;
+}
