@@ -1,5 +1,23 @@
-<div class="well">
-    <li>{{comment.author}} on {{moment-from-now comment.date}}</li>
-    <li>{{comment.content}}
-    <button{{action "destroyComment" comment}}><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>
-</div>
+
+
+<div class="well box">
+  <div class="wellHeader">
+    <h3>Re:{{question.title}}</h3>
+  </div>
+  <p class="wellFooter">What do you think of this article?   </p>
+
+  <div class="row postContent">
+    <div class="col-sm-3 postContent-author">
+      <div class="panel">
+        <img class="img-responsive avatar" src="" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'/>
+        by {{comment.author}}
+      </div>
+
+    </div>
+    <div class="col-sm-9 postContent-content">
+      {{comment.content}}
+      {{moment-from-now comment.date}}<
+    </div>
+  </div>
+<button{{action "destroyComment" comment}}><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+  </div>

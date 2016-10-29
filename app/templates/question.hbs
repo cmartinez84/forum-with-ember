@@ -30,7 +30,6 @@
 
 </div>
 {{#each model.question.comments as |comment|}}
-
-    {{comment-tile comment=comment destroyComment="destroyComment" addCommentRating="addCommentRating"}}
+    {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating"}}
 {{/each}}
 {{new-comment question=model.question postComment="postComment"}}
