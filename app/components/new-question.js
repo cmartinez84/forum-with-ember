@@ -4,7 +4,6 @@ export default Ember.Component.extend({
     charCount: 999,
     actions: {
         postQuestion() {
-          console.log(this.get('avatar'));
             var params = {
                 author: this.get('author'),
                 title: this.get('title'),
@@ -13,7 +12,9 @@ export default Ember.Component.extend({
                 avatar: this.get('avatar'),
                 rating: [0],
             };
-            this.sendAction("postQuestion", params);
+            if(params['author'] && params['title'] &&params['content']){
+                this.sendAction("postQuestion", params);
+            }
         },
         charCount(){
             var charCount = (this.get('content')).toString().length;

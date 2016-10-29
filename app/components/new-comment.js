@@ -9,7 +9,9 @@ export default Ember.Component.extend({
             date: moment().format('LLLL'),
             question: this.get('question'),
           };
-          this.sendAction('postComment', params);
+          if(params['author'] && params['content']){
+              this.sendAction("postComment", params);
+          }
       },
       charCount(){
           var charCount = (this.get('content')).toString().length;
@@ -20,7 +22,6 @@ export default Ember.Component.extend({
           output += charCount;
           this.set("count", output);
       }
-
     }
 
 });
