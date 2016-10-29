@@ -12,7 +12,6 @@ body{
 .star:hover .star{
     color: yellow;
     text-shadow: 0 0 1px grey;
-
 }
 div .star:hover,
 div .star:hover ~ .star  {
@@ -22,3 +21,27 @@ div .star:hover ~ .star  {
   color: yellow;
   text-shadow: 0 0 1px grey;
 }
+.box{
+  position: relative;
+}
+.well{
+  background: white !important;
+}
+.wellHeader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+  background: pink !important;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 0 18px;
+}
+.wellHeader *{
+  display: inline-block;
+}
+.postContent{
+  margin-top: 58px;
+}
+.postContent-content{
+border-left: 1px solid black;}
