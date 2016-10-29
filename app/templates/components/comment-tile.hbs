@@ -1,9 +1,5 @@
 <div class="well">
     <li>{{comment.author}} on {{moment-from-now comment.date}}</li>
     <li>{{comment.content}}
-    <div class="">
-      Average Raging: {{averageRating comment.rating}}
-      {{log comment.rating}}
-    </div>
     <button{{action "destroyComment" comment}}><i class="fa fa-trash-o" aria-hidden="true"></i></button></li>
 </div>

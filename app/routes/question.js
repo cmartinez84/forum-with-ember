@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model(params){
     return Ember.RSVP.hash({
-    question: this.store.findRecord('question', params.question_id)
+    question: this.store.findRecord('question', params.question_id),
+    comments: this.store.findAll('question')
     });
     },
     actions: {
@@ -21,10 +22,9 @@ export default Ember.Route.extend({
         comment.destroyRecord();
         this.transitionTo("question");
     },
-    addRating(question, rating){
+    addRating(toRate, rating){
       console.log(question);
-      question.get("rating").push(rating);
-      question.save();
+      toRate.get("rating").push(rating);
+      toRate.save();
     }
-}
 });

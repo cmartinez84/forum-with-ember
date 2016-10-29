@@ -3,6 +3,7 @@ export default Ember.Helper.helper(function(params) {
       tag = '<i class="fa fa-star lit" aria-hidden="true"}></i>';
       var output = 0;
       var stars ="";
+      console.log(params);
       var length = params[0].length;
       params[0].forEach(function(number){
         output += number;

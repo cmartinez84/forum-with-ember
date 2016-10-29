@@ -7,8 +7,8 @@ actions: {
             this.sendAction("destroyComment", comment);
         }
     },
-    click(){
-      console.log(this);
+    addRating(toRate, rating){
+      this.sendAction("addRating", toRate, rating);
     }
 }
 });

@@ -11,7 +11,8 @@
     <p>on {{model.question.date}}</p>
     <p>{{model.question.content}}</p>
     {{#each model.question.comments as |comment|}}
-        {{comment-tile comment=comment destroyComment="destroyComment"}}
+    
+        {{comment-tile comment=comment destroyComment="destroyComment" addCommentRating="addCommentRating"}}
     {{/each}}
 </div>
 {{new-comment question=model.question postComment="postComment"}}
