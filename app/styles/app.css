@@ -41,7 +41,21 @@ div .star:hover ~ .star  {
   display: inline-block;
 }
 .postContent{
-  margin-top: 58px;
+  margin: 58px auto 20px;
+
 }
 .postContent-content{
-border-left: 1px solid black;}
+border-left: 1px solid black;
+}
+.avatar{
+  max-height: 200px !important;
+}
+.wellFooter{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+}
+.wellFooter * {
+  display: inline-block;
+}
