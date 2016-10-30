@@ -9,6 +9,7 @@ export default Ember.Component.extend({
             date: moment().format('LLLL'),
             question: this.get('question'),
           };
+
           if(params['author'] && params['content']){
               this.sendAction("postComment", params);
           }
