@@ -16,5 +16,8 @@
       <p> Posted {{moment-from-now question.date}}</p>
     </div>
   </div>
-  <button class="btn btn-danger delete"{{action "destroyQuestion" question}}>X</button>
+  <div class="modify">
+      {{edit-question question}}
+      <button class="btn btn-danger "{{action "destroyQuestion" question}}>X</button>
+  </div>
 </div>

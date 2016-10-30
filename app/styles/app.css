@@ -67,12 +67,16 @@ height: 100% !important;
 .wellFooter * {
   display: inline-block;
 }
-button.delete{
+.modify{
     position: absolute;
     top: 0;
     right: 0;
     display: none;
 }
-.well:hover button.delete{
+.modify button, .modify div {
+    display: inline-block !important;
+    margin: 0!important;
+}
+.well:hover .modify{
     display: inline-block;
 }
