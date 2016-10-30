@@ -14,6 +14,10 @@ export default Ember.Component.extend({
             };
             if(params['author'] && params['title'] &&params['content']){
                 this.sendAction("postQuestion", params);
+                this.set("author", "");
+                this.set("title", "");
+                this.set("content", "");
+                this.set("avatar", "");
             }
         },
         charCount(){
