@@ -25,10 +25,14 @@ export default Ember.Route.extend({
     addRating(toRate, rating){
         toRate.get("rating").push(rating);
         toRate.save();
-        }
     },
     destroyQuestion(question){
         question.destroyRecord();
         this.transitionTo('index');
+       }
     }
 });
+
+
+
+"Nothing handled the action 'destroyQuestion2'. If you did handle the action, this error can be caused by returning true from an action handler in a controller, causing the action to bubble."
