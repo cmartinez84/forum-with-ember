@@ -22,7 +22,6 @@ export default Ember.Route.extend({
         this.transitionTo("question");
     },
     addRating(toRate, rating){
-        alert("hello");
         toRate.get("rating").push(rating);
         toRate.save();
     },

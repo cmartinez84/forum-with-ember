@@ -1,8 +1,8 @@
-{{averageRating comment.rating}}
 
 <div class="well box">
   <div class="wellHeader">
-    <h3>Re:{{question.title}}</h3>
+    <h3>Re: {{question.title}} {{averageRating comment.rating}}
+</h3>
   </div>
   <p class="wellFooter">What do you think of this article? {{add-rating toRate=comment addRating="addRating"}}  </p>
 
