@@ -24,6 +24,9 @@ export default Ember.Component.extend({
             }
             output += charCount;
             this.set("count", output);
+        },
+        click(){
+            alert("hey");
         }
 
     }

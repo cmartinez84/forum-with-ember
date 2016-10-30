@@ -2,10 +2,10 @@
     <h1>Comment on this post</h1>
     <form >
         <label for="">Author</label>
-        {{input value=author  id="author" class="form-control"}}
+        {{input value=author  id="author" class="form-control" enter="postComment"}}
 
         <label for="">Content</label>
-        {{input value=content id="content" class="form-control" action="charCount" on="key-up"}}
+        {{input value=content id="content" class="form-control" action="charCount" on="key-up" enter="postComment"}}
         <label class="red" for="">{{count}}</label><br>
     </form>
     <button  class="form-control btn btn-success" {{action "postComment" question}}>Comment!</button>

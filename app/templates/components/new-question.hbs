@@ -1,14 +1,14 @@
 <div class="well">
     <form class="" action="index.html" method="post">
         <label for="">Title:</label>
-        {{input value=title id="title" class="form-control" required='required'}}
+        {{input value=title id="title" class="form-control" required='required'  enter="postQuestion"}}
         <label for="">Author:</label>
-        {{input value=author id="author" class="form-control"}}
+        {{input value=author id="author" class="form-control"  enter="postQuestion"}}
         <label for="">Content:</label>
-        {{input value=content id="content" class="form-control" action="charCount" on="key-up"}}
+        {{input value=content id="content" class="form-control" action="charCount" on="key-up"  enter="postQuestion"}}
         <label class="red" for="">{{count}}</label><br>
         <label for="">Avatar:</label>
-        {{input value=avatar id="avatar" class="form-control" placeholder="optional"}}
+        {{input value=avatar id="avatar" class="form-control" placeholder="optional" enter="postQuestion"}}
         <button {{action "postQuestion"}}  class="form-control btn btn-success">Ask!</button>
     </form>
 </div>
