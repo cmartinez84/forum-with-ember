@@ -12,7 +12,7 @@ export default Ember.Component.extend({
                 avatar: this.get('avatar'),
                 rating: [5],
             };
-            if(params['author'] && params['title'] &&params['content']){
+            if(params['author'] && params['title'] && params['content']){
                 this.sendAction("postQuestion", params);
                 this.set("author", "");
                 this.set("title", "");
@@ -29,9 +29,5 @@ export default Ember.Component.extend({
             output += charCount;
             this.set("count", output);
         },
-        click(){
-            alert("hey");
-        }
-
     }
 });
