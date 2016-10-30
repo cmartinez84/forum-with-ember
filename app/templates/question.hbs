@@ -6,22 +6,21 @@
     <h3>{{model.question.title}}    {{averageRating model.question.rating}}</h3>
   </div>
   <p class="wellFooter">What do you think of this article? {{add-rating toRate=model.question addRating="addRating"}}  </p>
-
   <div class="row postContent">
     <div class="col-sm-3 postContent-author">
       <div class="panel">
         <img class="img-responsive avatar" src="{{model.question.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'/>
         <h3> {{model.question.author}}</h3>
       </div>
-
     </div>
     <div class="col-sm-9 postContent-content">
         <p>{{model.question.content}}</p>
       <p> Posted {{moment-from-now model.question.date}}</p>
     </div>
   </div>
-
+  <button class="btn btn-danger delete"{{action "destroyQuestion" model.question}}>X</button>
 </div>
+
 {{#each model.question.comments as |comment|}}
     {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating"}}
 {{/each}}

@@ -23,8 +23,12 @@ export default Ember.Route.extend({
         this.transitionTo("question");
     },
     addRating(toRate, rating){
-      toRate.get("rating").push(rating);
-      toRate.save();
-    }
+        toRate.get("rating").push(rating);
+        toRate.save();
+        }
+    },
+    destroyQuestion(question){
+        question.destroyRecord();
+        this.transitionTo('index');
     }
 });
