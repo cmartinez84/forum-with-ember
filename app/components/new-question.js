@@ -10,7 +10,7 @@ export default Ember.Component.extend({
                 date: moment().format('LLLL'),
                 content: this.get('content'),
                 avatar: this.get('avatar'),
-                rating: [0],
+                rating: [5],
             };
             if(params['author'] && params['title'] &&params['content']){
                 this.sendAction("postQuestion", params);
