@@ -8,6 +8,8 @@ export default Ember.Component.extend({
             content: this.get('content'),
             date: moment().format('LLLL'),
             question: this.get('question'),
+            rating: [5],
+
           };
 
           if(params['author'] && params['content']){
