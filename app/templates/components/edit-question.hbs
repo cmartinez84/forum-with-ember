@@ -1,18 +1,18 @@
 <div class="well">
-        <h3>Edit Question</h3>
-    <div class="row">
-        <div class="col-sm-4">
-            <label for="">Title:</label>
-            {{input value=question.title id="editTitle" class="form-control edit" enter="update" }}
-            <label for="">Author</label>
-            {{input value=question.author id="editAuthor" class="form-control edit" enter="update" }}
-            <label for="">Avatar</label>
-            {{input value=question.avatar id="editAvatar" class="form-control edit" enter="update" }}
-        </div>
-        <div class="col-sm-8">
-            <label for="">Content</label>
-            {{input value=question.content id="editContent" class="form-control edit"}}
-        </div>
+  <h3>Edit Question</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="">Title:</label>
+      {{input value=question.title id="editTitle" class="form-control edit" enter="update" }}
+      <label for="">Author</label>
+      {{input value=question.author id="editAuthor" class="form-control edit" enter="update" }}
+      <label for="">Avatar</label>
+      {{input value=question.avatar id="editAvatar" class="form-control edit" enter="update" }}
     </div>
-    <button type="button" name="button" class="btn btn-success form-control" {{action "update" question}} > Save</button>
+    <div class="col-sm-8">
+      <label for="">Content</label>
+      {{input value=question.content id="editContent" class="form-control edit"}}
+    </div>
+  </div>
+  <button type="button" name="button" class="btn btn-success form-control" {{action "update" question}}> Save</button>
 </div>

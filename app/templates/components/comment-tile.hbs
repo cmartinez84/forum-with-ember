@@ -3,27 +3,23 @@
     <h5>Re: {{question.title}} {{averageRating comment.rating}}
 </h5>
   </div>
-  <p class="wellFooter">What do you think of this article? {{add-rating toRate=comment addRating="addRating"}}  </p>
+  <p class="wellFooter">What do you think of this article? {{add-rating toRate=comment addRating="addRating"}} </p>
 
   <div class="row postContent">
     <div class="col-sm-3 postContent-author">
       <div class="panel">
-        <img class="img-responsive avatar" src="{{comment.avatar}} "alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'/>
-        by {{comment.author}}
+        <img class="img-responsive avatar" src="{{comment.avatar}} " alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"' /> by {{comment.author}}
       </div>
 
     </div>
     <div class="col-sm-9 postContent-content">
-      {{comment.content}}
-      {{moment-from-now comment.date}}<
+      {{comment.content}} {{moment-from-now comment.date}}
+      < </div>
     </div>
-  </div>
-  <div class="modify">
+    <div class="modify">
       <button class="btn btn-success " type="button" name="button" {{action "showCommentEdit" question}}><i class="fa fa-pencil"></i>
       </button>
-      <button class="btn btn-danger delete"{{action "destroyComment" comment}}>X</button>
+      <button class="btn btn-danger delete" {{action "destroyComment" comment}}>X</button>
+    </div>
   </div>
-  </div>
-  {{#if editComment}}
-    {{edit-comment comment=comment update="update" }}
-  {{/if}}
+  {{#if editComment}} {{edit-comment comment=comment update="update" }} {{/if}}

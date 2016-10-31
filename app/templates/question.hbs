@@ -1,14 +1,7 @@
 <div class="col-sm-3">
-    {{#each model.questions as |question|}}
-        {{question-tile question=question destroyQuestion="destroyQuestion"}}
-    {{/each}}
-    {{new-question postQuestion="postQuestion"}}
+  {{#each model.questions as |question|}} {{question-tile question=question destroyQuestion="destroyQuestion"}} {{/each}} {{new-question postQuestion="postQuestion"}}
 
 </div>
 <div class="col-sm-8">
-    {{question-detail question=model.question addRating="addRating" destroyQuestion="destroyQuestion" update="update"}}
-    {{#each model.question.comments as |comment|}}
-        {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating" addRating="addRating" update="update"}}
-    {{/each}}
-    {{new-comment question=model.question postComment="postComment"}}
+  {{question-detail question=model.question addRating="addRating" destroyQuestion="destroyQuestion" update="update"}} {{#each model.question.comments as |comment|}} {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating" addRating="addRating" update="update"}} {{/each}} {{new-comment question=model.question postComment="postComment"}}
 </div>

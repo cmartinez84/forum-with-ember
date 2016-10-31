@@ -1,27 +1,24 @@
-
 <div class="well box">
   <div class="wellHeader">
     <h5>{{question.title}} {{averageRating question.rating}}</h5>
   </div>
-  <p class="wellFooter">What do you think of this article? {{add-rating toRate=question addRating="addRating"}}  </p>
+  <p class="wellFooter">What do you think of this article? {{add-rating toRate=question addRating="addRating"}} </p>
   <div class="row postContent">
     <div class="col-sm-3 postContent-author">
       <div class="panel">
-        <img class="img-responsive avatar" src="{{question.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'/>
+        <img class="img-responsive avatar" src="{{question.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"' />
         <h3> {{question.author}}</h3>
       </div>
     </div>
     <div class="col-sm-9 postContent-content">
-        <p>{{question.content}}</p>
+      <p>{{question.content}}</p>
       <p> Posted {{moment-from-now question.date}}</p>
     </div>
   </div>
   <div class="modify">
-     <button class="btn btn-success " type="button" name="button" {{action "showQuestionEdit" question}}><i class="fa fa-pencil"></i>
-     </button>
-    <button class="btn btn-danger "{{action "destroyQuestion" question}}>X</button>
+    <button class="btn btn-success " type="button" name="button" {{action "showQuestionEdit" question}}><i class="fa fa-pencil"></i>
+    </button>
+    <button class="btn btn-danger " {{action "destroyQuestion" question}}>X</button>
   </div>
 </div>
-{{#if questionEdit}}
-    {{edit-question question=question update="update"}}
-{{/if}}
+{{#if questionEdit}} {{edit-question question=question update="update"}} {{/if}}

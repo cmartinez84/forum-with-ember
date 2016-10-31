@@ -1,19 +1,19 @@
 <div class="well">
-        <h3>Edit Comment</h3>
-    <div class="row">
-        <div class="col-sm-4">
-            <label for="">Author</label>
-            {{input value=comment.author id="author3" class="form-control edit" enter="update" }}
-            <label for="">Date</label>
-            {{input value=comment.date id="date3" class="form-control edit" enter="update" }}
-            <label for="">Avatar</label>
-            {{input value=comment.avatar id="avatar3" class="form-control edit" enter="update" }}
+  <h3>Edit Comment</h3>
+  <div class="row">
+    <div class="col-sm-4">
+      <label for="">Author</label>
+      {{input value=comment.author id="author3" class="form-control edit" enter="update" }}
+      <label for="">Date</label>
+      {{input value=comment.date id="date3" class="form-control edit" enter="update" }}
+      <label for="">Avatar</label>
+      {{input value=comment.avatar id="avatar3" class="form-control edit" enter="update" }}
 
-        </div>
-        <div class="col-sm-8">
-            <label for="">Content</label>
-            {{input value=comment.content id="editContent" class="form-control edit"}}
-        </div>
     </div>
-    <button type="button" name="button" class="btn btn-success form-control" {{action "update" comment}} > Save</button>
+    <div class="col-sm-8">
+      <label for="">Content</label>
+      {{input value=comment.content id="editContent" class="form-control edit"}}
+    </div>
+  </div>
+  <button type="button" name="button" class="btn btn-success form-control" {{action "update" comment}}> Save</button>
 </div>

@@ -1,12 +1,12 @@
 <div class="well">
-    <h3>Comment on this post</h3>
-    <form >
-        <label for="">Author</label>
-        {{input value=newCommentAuthor  id="newCommentAuthor" class="form-control" enter="postComment"}}
-        <label for="">Content</label>
-        {{input value=newCommentContent id="newCommentContent" class="form-control" action="charCount" on="key-up" enter="postComment"}}
-        <label for="">Avatar</label>
-        {{input value=newCommentAvatar id="newCommentAvatar" class="form-control" action="charCount" on="key-up" enter="postComment"}}
-    </form>
-    <button  class="form-control btn btn-success" {{action "postComment" question}}>Comment!</button>
+  <h3>Comment on this post</h3>
+  <form>
+    <label for="">Author</label>
+    {{input value=newCommentAuthor id="newCommentAuthor" class="form-control" enter="postComment"}}
+    <label for="">Content</label>
+    {{input value=newCommentContent id="newCommentContent" class="form-control" action="charCount" on="key-up" enter="postComment"}}
+    <label for="">Avatar</label>
+    {{input value=newCommentAvatar id="newCommentAvatar" class="form-control" action="charCount" on="key-up" enter="postComment"}}
+  </form>
+  <button class="form-control btn btn-success" {{action "postComment" question}}>Comment!</button>
 </div>

@@ -39,7 +39,7 @@ You will need the following things properly installed on your computer.
 * `ember build --environment production` (production)
 
 ## Link
-https://github.com/cmartinez84/github-search
+https://github.com/cmartinez84/forum-with-ember
 
 ## Known Bugs
 _None yet_
