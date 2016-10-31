@@ -24,19 +24,22 @@ div .star:hover ~ .star  {
 }
 .box{
   position: relative;
+  background: rgba(250,244,238, 1) !important;
 }
 .well{
-  background: white !important;
+  background: white;
 }
 .wellHeader{
   position: absolute;
   top: 0;
   left: 0;
   text-align: left;
-  background: pink !important;
+  background: rgba(84,95,94, 1);
   width: 100%;
   border-bottom: 1px solid black;
   padding: 0 18px;
+  color: white;
+  font-weight: bold;
 }
 .wellHeader *{
   display: inline-block;
@@ -92,7 +95,7 @@ h1{
     font-size: 4em !important;
 }
 
-h3, label, p, a{
+h5, label, p, a{
     font-family: 'Share Tech Mono', monospace;
 }
 a{
@@ -101,6 +104,12 @@ a{
 a:hover{
     text-decoration: none !important;
     color: inherit;
+}
+.well{
+    border: 2px solid rgba(169,191,188, 1);
+}
+input.edit{
+    background: rgba(250,244,238, 1) !important;
 }
 /*font-family: 'PT Sans Caption', sans-serif;*/
 /*font-family: 'Roboto Mono', monospace;*/

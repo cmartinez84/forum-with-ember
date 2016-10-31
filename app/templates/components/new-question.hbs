@@ -5,8 +5,8 @@
         <label for="">Author:</label>
         {{input value=author id="author" class="form-control"  enter="postQuestion"}}
         <label for="">Content:</label>
-        {{input value=content id="content" class="form-control" action="charCount" on="key-up"  enter="postQuestion"}}
-        <label class="red" for="">{{count}}</label><br>
+        {{input  size=455 value=content id="content" class="form-control" action="charCount" on="key-up"  enter="postQuestion"}}
+       <label class="red" for="">{{count}}</label><br>
         <label for="">Avatar:</label>
         {{input value=avatar id="avatar" class="form-control" placeholder="optional" enter="postQuestion"}}
         <button {{action "postQuestion"}}  class="form-control btn btn-success">Ask!</button>
