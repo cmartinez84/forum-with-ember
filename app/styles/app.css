@@ -116,3 +116,12 @@ input.edit{
 /*font-family: 'Comfortaa', cursive;*/
 /*font-family: 'Alfa Slab One', cursive;*/
 /*font-family: 'Share Tech Mono', monospace;*/
+li.questionTile:hover{
+    text-shadow: 1px 1px  white;
+}
+li.questionTile:hover span{
+    text-shadow: 1px 1px black;
+}
+span.reviews{
+    color: white;
+}
