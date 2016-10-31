@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model(params){
         return Ember.RSVP.hash({
+        questions: this.store.findAll('question'),
         question: this.store.findRecord('question', params.question_id),
         comments: this.store.findAll('comment')
         });
