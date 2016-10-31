@@ -1,10 +1,10 @@
 <div class="well">
         <label for="">Title:</label>
-        {{input value=newQuestionTitle id="newQuestionTitle" class="form-control" required='required'  enter="postQuestion"}}
+        {{input value=newQuestionTitle id="newQuestionTitle" class="form-control" required='required'  enter="postQuestion" }}
         <label for="">Author:</label>
         {{input value=newQuestionAuthor id="newQuestionAuthor" class="form-control"  enter="postQuestion"}}
         <label for="">Content:</label>
-        {{input  size=455 value=newQuestionContent id="newQuestionContent" class="form-control" action="charCount" on="key-up"  enter="postQuestion"}}
+        {{input value=newQuestionContent id="newQuestionContent" class="form-control" action="charCount"  on="key-up"  enter="postQuestion"}}
        <label class="red" for="">{{count}}</label><br>
         <label for="">Avatar:</label>
         {{input value=newQuestionAvatar id="newQuestionAvatar" class="form-control" placeholder="optional" enter="postQuestion"}}

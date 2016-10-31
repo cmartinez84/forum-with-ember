@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    charCount: 999,
+    charCount: 0,
     actions: {
         postQuestion() {
             var params = {
@@ -13,7 +13,6 @@ export default Ember.Component.extend({
                 rating: [5],
             };
             if(params['author'] && params['title'] && params['content']){
-
                 this.sendAction("postQuestion", params);
                 this.set("newQuestionAuthor", "");
                 this.set("newQuestionTitle", "");
@@ -22,7 +21,7 @@ export default Ember.Component.extend({
             }
         },
         charCount(){
-            var charCount = (this.get('content')).toString().length;
+            var charCount = (this.get('newQuestionContent')).toString().length;
             var output = "Characters: "
             if(charCount > 500){
                 charCount += " too long! Your question must be under 500 characters";

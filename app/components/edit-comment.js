@@ -10,6 +10,7 @@ export default Ember.Component.extend({
               date: this.get('date3'),
               avatar: this.get('avatar3')
             };
+
             console.log(params);
             this.sendAction("update", question, params);
         }
