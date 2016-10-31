@@ -1,6 +1,5 @@
 <body>
   <header>
-
     <div class="container-fluid">
       <nav class="nav navbar-default navbar-fixed-top">
       <ul class="nav navbar-nav navbar-right">
@@ -13,7 +12,7 @@
     <ul class="nav navbar-nav navbar-left">
         <ul class="nav navbar-nav navbar-left">
       {{#link-to  "index"}}
-        <li class="navbar-text">Home</li>
+        <li class="navbar-text">blorplr</li>
       {{/link-to}}
     </ul>
     </ul>
@@ -21,7 +20,11 @@
     </div>
   </header>
   <div class="container">
-      <h1>Hello</h1>
+      {{#link-to 'index'}}
+        <h1>blorplr</h1>
+
+      {{/link-to}}
+      <h3>america's most curated question-answer feed</h3>
       {{outlet}}
   </div>
 </body>

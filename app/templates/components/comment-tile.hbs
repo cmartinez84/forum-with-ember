@@ -20,7 +20,11 @@
     </div>
   </div>
   <div class="modify">
+      <button class="btn btn-success " type="button" name="button" {{action "showCommentEdit" question}}><i class="fa fa-pencil"></i>
+      </button>
       <button class="btn btn-danger delete"{{action "destroyComment" comment}}>X</button>
   </div>
   </div>
-  {{edit-comment comment=comment update="update" }}
+  {{#if editComment}}
+    {{edit-comment comment=comment update="update" }}
+  {{/if}}

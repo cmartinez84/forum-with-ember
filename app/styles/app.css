@@ -80,3 +80,29 @@ height: 100% !important;
 .well:hover .modify{
     display: inline-block;
 }
+
+h1{
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow:
+    1px 1px 0px black,
+    5px 1px 0px white,
+    7px 1px 2px black,
+    7px 1px 2px white;
+    font-size: 7em !important;
+}
+
+h3, label, p{
+    font-family: 'Share Tech Mono', monospace;
+}
+a{
+    color: inherit;
+}
+a:hover{
+    text-decoration: none !important;
+    color: inherit;
+}
+/*font-family: 'PT Sans Caption', sans-serif;*/
+/*font-family: 'Roboto Mono', monospace;*/
+/*font-family: 'Comfortaa', cursive;*/
+/*font-family: 'Alfa Slab One', cursive;*/
+/*font-family: 'Share Tech Mono', monospace;*/
