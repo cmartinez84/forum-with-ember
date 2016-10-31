@@ -1,24 +1,18 @@
-<button class="btn btn-success " type="button" name="button" ><i class="fa fa-pencil" aria-hidden="true" data-toggle="modal" data-target="#myModal"></i>
-</button>
-
-
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+<div class="well">
+        <h3>Edit Question</h3>
+    <div class="row">
+        <div class="col-sm-4">
+            <label for=""></label>
+            {{input value=question.title id="editTitle" class="form-control"}}
+            <label for="">Author</label>
+            {{input value=question.author id="editAuthor" class="form-control"}}
+            <label for="">Avatar</label>
+            {{input value=question.avatar id="editAvatar" class="form-control"}}
+        </div>
+        <div class="col-sm-8">
+            <label for="">Content</label>
+            {{textarea value=question.content id="editContent" class="form-control"}}
+        </div>
     </div>
-  </div>
+    <button type="button" name="button" class="btn btn-success form-control" {{action "update" question}} > Save</button>
 </div>
