@@ -9,6 +9,9 @@ actions: {
     },
     addRating(toRate, rating){
       this.sendAction("addRating", toRate, rating);
-    }
+  },
+  update(comment, params){
+      this.sendAction("update", comment, params)
+  }
 }
 });

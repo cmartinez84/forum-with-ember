@@ -1,5 +1,5 @@
 {{question-detail question=model.question addRating="addRating" destroyQuestion="destroyQuestion" update="update"}}
 {{#each model.question.comments as |comment|}}
-    {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating" addRating="addRating"}}
+    {{comment-tile comment=comment question=model.question destroyComment="destroyComment" addCommentRating="addCommentRating" addRating="addRating" update="update"}}
 {{/each}}
 {{new-comment question=model.question postComment="postComment"}}
