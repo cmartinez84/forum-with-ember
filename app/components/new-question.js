@@ -5,19 +5,20 @@ export default Ember.Component.extend({
     actions: {
         postQuestion() {
             var params = {
-                author: this.get('author'),
-                title: this.get('title'),
+                author: this.get('newQuestionAuthor'),
+                title: this.get('newQuestionTitle'),
                 date: moment().format('LLLL'),
-                content: this.get('content'),
-                avatar: this.get('avatar'),
+                content: this.get('newQuestionContent'),
+                avatar: this.get('newQuestionAvatar'),
                 rating: [5],
             };
             if(params['author'] && params['title'] && params['content']){
+
                 this.sendAction("postQuestion", params);
-                this.set("author", "");
-                this.set("title", "");
-                this.set("content", "");
-                this.set("avatar", "");
+                this.set("newQuestionAuthor", "");
+                this.set("newQuestionTitle", "");
+                this.set("newQuestionComment", "");
+                this.set("newQuestionAvatar", "");
             }
         },
         charCount(){

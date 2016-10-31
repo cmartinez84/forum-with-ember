@@ -9,6 +9,12 @@ export default Ember.Route.extend({
         });
     },
     actions: {
+    postQuestion(params){
+        alert("yo");
+            var newQuestion = this.store.createRecord('question', params);
+             newQuestion.save();
+             this.transitionTo('index');
+         },
     postComment(params){
        var newComment = this.store.createRecord('comment', params);
        var question = params.question;

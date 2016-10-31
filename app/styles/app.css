@@ -95,7 +95,7 @@ h1{
     font-size: 4em !important;
 }
 
-h5, label, p, a{
+h5, label, p, a, h3{
     font-family: 'Share Tech Mono', monospace;
 }
 a{

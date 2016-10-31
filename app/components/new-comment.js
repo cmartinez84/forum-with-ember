@@ -4,8 +4,8 @@ export default Ember.Component.extend({
     actions: {
         postComment(){
           var params = {
-            author: this.get('author'),
-            content: this.get('content'),
+            author: this.get('newCommentAuthor'),
+            content: this.get('newCommentContent'),
             date: moment().format('LLLL'),
             question: this.get('question'),
             rating: [5],
@@ -13,8 +13,8 @@ export default Ember.Component.extend({
 
           if(params['author'] && params['content']){
               this.sendAction("postComment", params);
-              this.set("author", "");
-              this.set("content", "");
+              this.set("newCommentAuthor", "");
+              this.set("newCommentContent", "");
           }
       },
       charCount(){
