@@ -40,6 +40,7 @@ export default Ember.Route.extend({
                 }
                 else {
                     alert("You have been successfully logged in");
+                    params.member.signIn(foundMember.get('firstObject'));
                 }
             }, function(error){
                 console.log(error + "a");
