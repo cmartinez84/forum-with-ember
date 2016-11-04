@@ -8,7 +8,6 @@ export default Ember.Component.extend({
                 screenName: this.get('signInScreenName'),
                 password: this.get('signInUserPassword'),
                 member: this.get('member')
-
             };
             this.sendAction('signIn', params);
         }
