@@ -1,8 +1,9 @@
 <div class="col-sm-3">
   {{new-question postQuestion="postQuestion"}}
+  {{new-member signUp="signUp" }}
 
 </div>
 <div class="col-sm-8">
   {{#each model.questions as |question|}} {{question-tile question=question destroyQuestion="destroyQuestion"}} {{/each}}
-{{new-member signUp="signUp" }}
+
 </div>

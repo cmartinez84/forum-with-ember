@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    member: Ember.inject.service(),
     charCount: 0,
     actions: {
         postQuestion() {
