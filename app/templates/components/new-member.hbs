@@ -1,0 +1,16 @@
+<div class="well">
+    <label for="">First Name</label>
+    {{input value=newMemberFirstName id="newMemberFirstName" class="form-control"}}
+    <label for="">Last Name</label>
+    {{input value=newMemberLastName id="newMemberLastName" class="form-control"}}
+    <label for="">Screen Name</label>
+    {{input value=newMemberScreenName id="newMemberScreenName" class="form-control"}}
+    <label for="">Email</label>
+    {{input value=newMemberEmail id="newMemberEmail" class="form-control"}}
+    <label for="">Password</label>
+    {{input value=newMemberPassword id="newMemberPassword" class="form-control"}}
+    <label for="">Avatar</label>
+    {{input value=newMemberAvatar id="newMemberAvatar" class="form-control" placeholder="optional"}}
+
+    <button {{action "signUp"}} class="btn btn-success">Sign Up</button>
+</div>
