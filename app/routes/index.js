@@ -24,8 +24,7 @@ export default Ember.Route.extend({
         signUp(params){
             var newMember = this.store.createRecord('member', params);
             newMember.save();
-            console.log("adad");
-            this.transitionTo('index');
+            this.transitionTo('members');
         }
     }
 });

@@ -5,13 +5,19 @@ export default Ember.Component.extend({
         signUp(){
 
             var params = {
-                name: this.get('newMemberFirstName')+ this.get('newMemberLastName'),
+                name: this.get('newMemberFirstName')+ " "+this.get('newMemberLastName'),
                 screenName: this.get('newMemberScreenName'),
                 email: this.get('newMemberEmail'),
                 password: this.get('newMemberPassword'),
                 avatar: this.get('newMemberAvatar'),
             };
-            console.log(params);
+            this.set('newMemberFirstName');
+            this.set('newMemberLastName');
+            this.set('newMemberScreenName');
+            this.set('newMemberEmail');
+            this.set('newMemberPassword');
+            this.set('newMemberAvatar');
+
             this.sendAction("signUp", params);
         }
     }
