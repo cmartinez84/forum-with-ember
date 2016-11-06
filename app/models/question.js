@@ -8,4 +8,5 @@ export default DS.Model.extend({
     rating: DS.attr(),
     avatar: DS.attr(),
     comments: DS.hasMany('comment', {async: true}),
+    member: DS.belongsTo('member', {async: true}),
 });

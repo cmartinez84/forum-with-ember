@@ -9,8 +9,16 @@ export default Ember.Route.extend({
     },
     actions: {
         postQuestion(params){
+            var member = this.get('member').get('member');
             var newQuestion = this.store.createRecord('question', params);
-             newQuestion.save();
+             newQuestion.save().then(function(){
+                 if(member){
+                     member.get('questions').addObject(newQuestion);
+                     member.save().then(function(){
+                        return newQuestion.set('member', member);
+                     });
+                 }
+             });
              this.transitionTo('index');
         },
         destroyQuestion(question){

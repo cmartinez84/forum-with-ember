@@ -1,3 +1,14 @@
+{{#if member.member}}
+<div class="">
+    <h3>New Question by {{member.name}} </h3>
+  <label for="">Title:</label>
+  {{input value=newQuestionTitle id="newQuestionTitle" class="form-control" required='required' enter="postQuestion" }}
+  <label for="">Content:</label>
+  {{input value=newQuestionContent id="newQuestionContent" class="form-control" action="charCount" on="key-up" enter="postQuestion"}}
+  <button {{action "postQuestionMember"}} class="form-control btn btn-success">Ask!</button>
+</div>
+{{else}}
+
 <div class="well">
     <h3>New Question by {{member.name}} </h3>
   <label for="">Title:</label>
@@ -12,3 +23,4 @@
   {{input value=newQuestionAvatar id="newQuestionAvatar" class="form-control" placeholder="optional" enter="postQuestion"}}
   <button {{action "postQuestion"}} class="form-control btn btn-success">Ask!</button>
 </div>
+{{/if}}
