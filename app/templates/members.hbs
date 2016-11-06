@@ -1,4 +1,10 @@
-{{#each model.members as |member|}}
-    {{#link-to 'members.member' member.id}}<li>Member Name: {{member.name}}</li>{{/link-to}}
-{{/each}}
-{{outlet}}
+<div class="row">
+    <div class="well col-sm-6">
+        {{#each model.members as |member|}}
+            {{#link-to 'members.member' member.id}}<li>Member Name: {{member.name}}</li>{{/link-to}}
+        {{/each}}
+    </div>
+    <div class="  col-sm-6">
+        {{outlet}}
+    </div>
+</div>

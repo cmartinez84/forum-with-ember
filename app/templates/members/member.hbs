@@ -1,3 +1,12 @@
-<div class="well">
-    <h1>hello</h1>
+
+<div class="well row">
+        <h3>Member Info:</h3>
+            <div class="col-sm-6">
+                <img src="{{model.member.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'  class="img-responsive"/>
+            </div>
+            <div class="col-sm-6">
+                <h5>Screen Name: {{model.member.screenName}}</h5>
+                <h3>Name: {{model.member.name}}</h3>
+                <p>Email: {{model.member.email}}</p>
+            </div>
 </div>
