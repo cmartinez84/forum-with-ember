@@ -1,6 +1,7 @@
 import Ember from 'ember';
 var store = Ember.store;
 export default Ember.Service.extend({
+    member: null,
     name:  "Unregistered Name",
     email: "Unregistered Email",
     password: "Unregistered password",
@@ -17,6 +18,7 @@ export default Ember.Service.extend({
             this.set("password", foundMember.get('password'));
             this.set("avatar", foundMember.get('avatar'));
             this.set("id", foundMember.get('id'));
+            this.set('member', foundMember);
             console.log("signed in");
         },
         signOut(params){
@@ -28,6 +30,6 @@ export default Ember.Service.extend({
             this.set("id", "");
             console.log("signed out");
         },
-        
+
 
 });

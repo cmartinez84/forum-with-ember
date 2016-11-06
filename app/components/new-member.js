@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     actions: {
         signUp(){
-
             var params = {
                 name: this.get('newMemberFirstName')+ " "+this.get('newMemberLastName'),
                 screenName: this.get('newMemberScreenName'),

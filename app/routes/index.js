@@ -67,5 +67,9 @@ export default Ember.Route.extend({
         });
         this.transitionTo('index');
         },
+        destroy(member){
+            member.get('member').destroyRecord().then(function(){
+            })
+        }
     }
 });

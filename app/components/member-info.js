@@ -13,6 +13,11 @@ export default Ember.Component.extend({
             }
             this.sendAction('update', params);
         },
+        destroy(member){
+            // var memeber  = member.member;
+            alert("destroy");
+            this.sendAction("destroy", member );
+        }
 
     }
 });
