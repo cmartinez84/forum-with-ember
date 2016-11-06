@@ -54,27 +54,6 @@ export default Ember.Route.extend({
                 console.log(error);
             }); //end then
         },
-        update(params){
-            var member = this.get('member');
-            this.get('store').findRecord('member', member.get('id')).then(function(foundMember){
-                console.log(foundMember.get('name'));
-                console.log(params);
-            Object.keys(params).forEach(function(key){
-                if(params[key] !== undefined){
-                    console.log("if");
-                    alert('ran');
-                    foundMember.set(key, params[key]);
-                }
-                else{
-                    console.log("else");
-                }
-            });
-            foundMember.save();
-        });
-        this.transitionTo('index');
-        },
-        destroyMember(member){
-            member.get('member').destroyRecord();
-        },
+        
     },
 });

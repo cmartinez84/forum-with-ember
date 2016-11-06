@@ -1,6 +1,6 @@
 {{#if member.member}}
-<div class="">
-    <h3>New Question by {{member.name}} </h3>
+<div class="well">
+    <h3>Ask a question</h3>
   <label for="">Title:</label>
   {{input value=newQuestionTitle id="newQuestionTitle" class="form-control" required='required' enter="postQuestion" }}
   <label for="">Content:</label>
@@ -10,7 +10,7 @@
 {{else}}
 
 <div class="well">
-    <h3>New Question by {{member.name}} </h3>
+    <h3>Ask a question as a guest</h3>
   <label for="">Title:</label>
   {{input value=newQuestionTitle id="newQuestionTitle" class="form-control" required='required' enter="postQuestion" }}
   <label for="">Author:</label>

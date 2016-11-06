@@ -4,6 +4,9 @@ export default Ember.Component.extend({
     member: Ember.inject.service(),
 
     actions: {
+        showUpdateForm(){
+            this.set('updateForm', true);
+        },
         update(){
             var params = {
                 name: this.get('updateName'),
@@ -12,6 +15,7 @@ export default Ember.Component.extend({
                 avatar: this.get('updateAvatar'),
                 screenName: this.get('updateScreenName'),
             };
+            this.set('updateForm', false);
             this.sendAction('update', params);
         },
         destroyMember(member){

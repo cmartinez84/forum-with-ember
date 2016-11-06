@@ -22,6 +22,11 @@
             {{#link-to "members"}}
             <li class="navbar-text">members</li>
             {{/link-to}}
+            {{#if member.member.id}}
+                {{#link-to 'profile' member.member.id}}
+                <li class="navbar-text">my profile</li>
+                {{/link-to}}
+            {{/if}}
           </ul>
         </ul>
       </nav>
