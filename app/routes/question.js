@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+    member: Ember.inject.service(),
+
     model(params){
         return Ember.RSVP.hash({
         questions: this.store.findAll('question'),
@@ -16,14 +18,27 @@ export default Ember.Route.extend({
              this.transitionTo('index');
          },
     postComment(params){
+        var member = this.get('member').get('member');
        var newComment = this.store.createRecord('comment', params);
        var question = params.question;
         question.get("comments").addObject(newComment);
         newComment.save().then(function(){
             return question.save();
-        });
+        }).then(function(){
+            console.log("then");
+            if(member){
+                console.log("if");
+             member.get('comments').addObject(newComment);
+             member.save().then(function(){
+                 newComment.set('member', member);
+                 return newComment.save();
+             });
+            }
+        })
         this.transitionTo("question");
     },
+
+
     destroyComment(comment){
         comment.destroyRecord();
         this.transitionTo("question");

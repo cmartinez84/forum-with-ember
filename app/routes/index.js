@@ -48,7 +48,6 @@ export default Ember.Route.extend({
         },
         update(params){
             var member = this.get('member');
-            console.log(member.get('id'));
             this.get('store').findRecord('member', member.get('id')).then(function(foundMember){
                 console.log(foundMember.get('name'));
                 console.log(params);

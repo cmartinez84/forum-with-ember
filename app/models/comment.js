@@ -6,5 +6,6 @@ export default DS.Model.extend({
     date: DS.attr("string"),
     avatar: DS.attr("string"),
     question: DS.belongsTo('question', {async: true}),
-    rating: DS.attr()
+    rating: DS.attr(),
+    member: DS.belongsTo('member', {async: true}),
 });
