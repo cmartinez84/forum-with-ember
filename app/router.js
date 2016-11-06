@@ -8,7 +8,9 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('question',{path:'/question/:question_id'});
-  this.route('members');
+  this.route('members', function() {
+    this.route('member', {path: 'member/:member_id'});
+  });
   this.route('profile', {path:'/profile/:member_id'});
 });
 
