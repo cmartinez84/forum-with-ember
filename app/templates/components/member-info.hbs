@@ -1,0 +1,24 @@
+<div class="well">
+    <div class="well">
+        <h3>Member Info:</h3>
+        <img src="{{member.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'  class="img-responsive"/>
+        <h3>{{member.name}}</h3>
+        <h5>{{member.screenName}}</h5>
+        <p>{{member.email}}</p>
+        <p>{{member.password}}</p>
+   </div>
+</div>
+
+<div class="well">
+    <label for="">Name:</label>
+    {{input value=updateName id="updateName" placeholder=member.name class="form-control"}}
+    <label for="">Email:</label>
+    {{input value=updateEmail id="updateEmail" placeholder=member.email class="form-control"}}
+    <label for="">Password:</label>
+    {{input value=updatePassword id="updatePassword" placeholder=member.password class="form-control"}}
+    <label for="">Avatar:</label>
+    {{input value=updateAvatar id="updateAvatar" placeholder=member.avatar class="form-control"}}
+    <label for="">Screen Name:</label>
+    {{input value=updateScreenName id="updateScreenName" placeholder=member.screenName class="form-control"}}
+    <button {{action "update"}} class="form-control btn btn-success">Save</button>
+</div>

@@ -11,7 +11,6 @@ export default Ember.Component.extend({
             question: this.get('question'),
             rating: [5],
           };
-console.log(params);
           if(params['author'] && params['content']){
               this.sendAction("postComment", params);
               this.set("newCommentAuthor", "");

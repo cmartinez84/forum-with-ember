@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    // chris: "chris",
+    member: Ember.inject.service(),
+
     model(){
         return Ember.RSVP.hash({
             questions: this.store.findAll('question'),
-
         });
     },
     actions: {
@@ -44,28 +44,28 @@ export default Ember.Route.extend({
                     params.member.signIn(foundMember.get('firstObject'));
                 }
             }, function(error){
-                console.log(error + "a");
+                console.log(error);
             }); //end then
-        }
+        },
+        update(params){
+            var member = this.get('member');
+            console.log(member.get('id'));
+            this.get('store').findRecord('member', member.get('id')).then(function(foundMember){
+                console.log(foundMember.get('name'));
+                console.log(params);
+            Object.keys(params).forEach(function(key){
+                if(params[key] !== undefined){
+                    console.log("if");
+                    alert('ran');
+                    foundMember.set(key, params[key]);
+                }
+                else{
+                    console.log("else");
+                }
+            });
+            foundMember.save();
+        });
+        this.transitionTo('index');
+        },
     }
 });
-//
-// ignIn(params){
-//         var _this = this;
-//         this.store.query('user', {
-//           orderBy:'userName',
-//           equalTo: params.userName
-//           }).then(function(record){
-//             var password = record.get('firstObject').get('password');
-//             if(password === params.password){
-//               alert("you are logged in");
-//               var params2 = {
-//                 userName: record.get('firstObject').get('userName'),
-//                 email: record.get('firstObject').get('email')
-//               };
-//               _this.get('user').signIn(params2);
-//             }
-//             else{
-//               alert("you are not logged in");
-//             }
-//         });
