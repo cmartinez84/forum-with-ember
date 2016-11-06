@@ -1,4 +1,4 @@
-<div class="well">
+{{#unless member.member}}<div class="well">
     <h3>Sign In</h3>
     <label for="">User Name</label>
     {{input value=signInScreenName id="signInScreenName" class="form-control"}}
@@ -6,3 +6,4 @@
     {{input value=signInUserPassword id="signInUserPassword" class="form-control"}}
     <button {{action "signIn"}} class="btn btn-success">Sign In</button>
 </div>
+{{/unless}}

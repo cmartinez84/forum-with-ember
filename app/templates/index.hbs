@@ -1,14 +1,15 @@
 <div class="col-sm-3">
-    {{sign-in signIn="signIn"}}
-
-  {{new-question postQuestion="postQuestion"}}
 
 
+  {{sign-in signIn="signIn"}}
+
+  {{#unless member.member}}
+      {{new-member signUp="signUp" }}
+  {{/unless}}
 </div>
 <div class="col-sm-3">
-    {{#unless member.member}}
-        {{new-member signUp="signUp" }}
-    {{/unless}}
+    {{new-question postQuestion="postQuestion"}}
+
 </div>
 <div class="col-sm-6">
   {{#each model.questions as |question|}}
