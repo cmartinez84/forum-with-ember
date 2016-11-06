@@ -1,8 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    member: Ember.inject.service(),
+    count: "",
     actions: {
         postComment(){
+        console.log(this.get('member').member);
           var params = {
             author: this.get('newCommentAuthor'),
             content: this.get('newCommentContent'),
@@ -18,6 +21,21 @@ export default Ember.Component.extend({
               this.set("newCommentAvatar", "");
           }
       },
+      postCommentMember(){
+          var member = this.get('member').get('member');
+        var params = {
+          author: member.get('screenName'),
+          avatar: member.get('avatar'),
+          content: this.get('newCommentContent'),
+          question: this.get('question'),
+          date: moment().format('LLLL'),
+          rating: [5],
+        };
+        if(params['author'] && params['content']){
+            this.sendAction("postComment", params);
+            this.set("newCommentContent", "");
+        }
+    },
       charCount(){
           var charCount = (this.get('content')).toString().length;
           var output = "Characters: ";

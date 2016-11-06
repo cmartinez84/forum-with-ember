@@ -10,7 +10,6 @@ export default Ember.Service.extend({
     id: "invalid ID",
 
         signIn(foundMember){
-            console.log(foundMember.get('name'));
             this.set("name", foundMember.get('name'));
             this.set("email", foundMember.get('email'));
             this.set("screenName", foundMember.get('screenName'));
@@ -18,7 +17,7 @@ export default Ember.Service.extend({
             this.set("avatar", foundMember.get('avatar'));
             this.set("id", foundMember.get('id'));
             this.set('member', foundMember);
-            console.log("signed in");
+            console.log(this.get('member').get('name'));
         },
         signOut(){
             this.set("name", "");
