@@ -20,7 +20,7 @@ export default Ember.Component.extend({
       },
       charCount(){
           var charCount = (this.get('content')).toString().length;
-          var output = "Characters: "
+          var output = "Characters: ";
           if(charCount > 500){
               charCount += " too long! Your question must be under 500 characters";
           }

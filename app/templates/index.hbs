@@ -4,11 +4,13 @@
 </div>
 <div class="col-sm-3">
 <h1>member stuff</h1>
-    {{member-info member=member update="update" destroy="destroy"}}
+    {{member-info  update="update" destroyMember='destroyMember'}}
     {{new-member signUp="signUp" }}
     {{sign-in signIn="signIn"}}
 
 </div>
 <div class="col-sm-6">
-  {{#each model.questions as |question|}} {{question-tile question=question destroyQuestion="destroyQuestion"}} {{/each}}
+  {{#each model.questions as |question|}}
+    {{question-tile question=question destroyQuestion="destroyQuestion"}}
+  {{/each}}
 </div>

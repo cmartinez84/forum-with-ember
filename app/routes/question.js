@@ -5,7 +5,7 @@ export default Ember.Route.extend({
         return Ember.RSVP.hash({
         questions: this.store.findAll('question'),
         question: this.store.findRecord('question', params.question_id),
-        comments: this.store.findAll('comment')
+        comments: this.store.findAll('comment'),
         });
     },
     actions: {

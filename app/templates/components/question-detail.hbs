@@ -21,4 +21,6 @@
     <button class="btn btn-danger " {{action "destroyQuestion" question}}>X</button>
   </div>
 </div>
-{{#if questionEdit}} {{edit-question question=question update="update"}} {{/if}}
+{{#if questionEdit}}
+    {{edit-question question=question update="update"}}
+{{/if}}

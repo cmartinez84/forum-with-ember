@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     member: Ember.inject.service(),
-
     model(){
         return Ember.RSVP.hash({
             questions: this.store.findAll('question'),
@@ -67,9 +66,8 @@ export default Ember.Route.extend({
         });
         this.transitionTo('index');
         },
-        destroy(member){
-            member.get('member').destroyRecord().then(function(){
-            })
-        }
-    }
+        destroyMember(member){
+            member.get('member').destroyRecord();
+        },
+    },
 });

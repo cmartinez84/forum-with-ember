@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    member: Ember.inject.service(),
+
     actions: {
-        member: Ember.inject.service(),
         update(){
             var params = {
                 name: this.get('updateName'),
@@ -10,13 +11,12 @@ export default Ember.Component.extend({
                 password: this.get('updatePassword'),
                 avatar: this.get('updateAvatar'),
                 screenName: this.get('updateScreenName'),
-            }
+            };
             this.sendAction('update', params);
         },
-        destroy(member){
-            // var memeber  = member.member;
+        destroyMember(member){
             alert("destroy");
-            this.sendAction("destroy", member );
+            this.sendAction("destroyMember", member );
         }
 
     }

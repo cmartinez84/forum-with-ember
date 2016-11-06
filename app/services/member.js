@@ -8,7 +8,6 @@ export default Ember.Service.extend({
     screenName: "Unregistered avatar",
     avatar: "Unregistered avatar",
     id: "invalid ID",
-    store: Ember.inject.service(),
 
         signIn(foundMember){
             console.log(foundMember.get('name'));
@@ -21,7 +20,7 @@ export default Ember.Service.extend({
             this.set('member', foundMember);
             console.log("signed in");
         },
-        signOut(params){
+        signOut(){
             this.set("name", "");
             this.set("email","");
             this.set("screenName","");
