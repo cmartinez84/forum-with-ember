@@ -12,7 +12,6 @@
 
 </div>
 <div class="col-sm-6">
-  {{#each model.questions as |question|}}
-    {{question-tile question=question destroyQuestion="destroyQuestion"}}
-  {{/each}}
+
+    {{all-questions questions=model.questions destroyQuestion="destroyQuestion"}}
 </div>

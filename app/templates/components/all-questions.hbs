@@ -1,0 +1,9 @@
+<select class="form-control" name="" id="sortQuestions" {{action 'sortChange' on='change'}}>
+    <option value="title:asc">Sorted By question title</option>
+    <option value="author:asc">Sorted by question author</option>
+    <option value="comments.length:desc">Sort by number of comments</option>
+</select>
+
+{{#each sortedQuestions as |question|}}
+  {{question-tile question=question destroyQuestion="destroyQuestion"}}
+{{/each}}

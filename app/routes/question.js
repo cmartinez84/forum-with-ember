@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     member: Ember.inject.service(),
-
     model(params){
         return Ember.RSVP.hash({
         questions: this.store.findAll('question'),
@@ -10,6 +9,7 @@ export default Ember.Route.extend({
         comments: this.store.findAll('comment'),
         });
     },
+    
     actions: {
     postQuestion(params){
         alert("yo");
@@ -38,7 +38,6 @@ export default Ember.Route.extend({
         this.transitionTo("question");
     },
 
-
     destroyComment(comment){
         comment.destroyRecord();
         this.transitionTo("question");
@@ -59,10 +58,7 @@ export default Ember.Route.extend({
       });
       question.save();
       this.transitionTo('question');
-    }
+  },
+
     }
 });
-
-
-
-"Nothing handled the action 'destroyQuestion2'. If you did handle the action, this error can be caused by returning true from an action handler in a controller, causing the action to bubble."

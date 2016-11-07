@@ -1,16 +1,15 @@
-{{  heading}} hi
-
+heading: {{heading}}
 <div class="well row">
         <h3>Member Info:</h3>
             <div class="col-sm-6">
                 <img src="{{member.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'  class="img-responsive"/>
             </div>
             <div class="col-sm-6">
-                <h5>Screen Name: {{member.screenName}}</h5>
-                <h3>Name: {{member.name}}</h3>
-                <p>Email: {{member.email}}</p>
-                <p>Questions:{{member.questions.length}} </p>
-                <p>Comments: {{member.comments.length}} </p>
+                <h5>Screen Name: {{selectedMember.screenName}}</h5>
+                <h3>Name: {{selectedMember.name}}</h3>
+                <p>Email: {{selectedMember.email}}</p>
+                <p>Questions:{{selectedMember.questions.length}} </p>
+                <p>Comments: {{selectedMember.comments.length}} </p>
                 Average Posting Rating:
             </div>
 </div>
