@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    sortBy: ['date:desc'],
+    sortBy: ['title:asc'],
     sortedQuestions: Ember.computed.sort('questions', "sortBy"),
 
     actions: {

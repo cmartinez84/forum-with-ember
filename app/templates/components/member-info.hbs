@@ -6,10 +6,11 @@
                 <img src="{{member.avatar}}" alt="" onerror='this.src="https://heatherchristenaschmidt.files.wordpress.com/2011/09/facebook_no_profile_pic2-jpg.gif"'  class="img-responsive"/>
             </div>
             <div class="col-sm-6">
-                <h3>{{member.member.name}}</h3>
-                <h5>{{member.member.screenName}}</h5>
-                <p>{{member.member.email}}</p>
-                <p>{{member.member.password}}</p>
+                <h3>Name: {{member.member.name}}</h3>
+                <h5>Screen Name :{{member.member.screenName}}</h5>
+                <p>Email: {{member.member.email}}</p>
+                <p>Password: {{member.member.password}}</p>
+                <p>Questions: {{member.member.comments.length}}   </p>
             </div>
        </div>
        <button class="btn btn-success form-control"{{action 'showUpdateForm'}}>Update Information:</button>
