@@ -1,7 +1,10 @@
+
+
 <div class="row">
     <div class="well col-sm-6">
+        <h3>All members</h3>
         {{#each model.members as |member|}}
-            {{#link-to 'members.member' member.id}}<li>Member Name: {{member.name}}</li>{{/link-to}}
+            {{#link-to 'members.member' member.id}}<li>{{member.name}}</li>{{/link-to}}
         {{/each}}
     </div>
     <div class="  col-sm-6">
