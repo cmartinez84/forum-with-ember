@@ -40,6 +40,8 @@ You will need the following things properly installed on your computer.
 
 ## Link
 https://github.com/cmartinez84/forum-with-ember
+View it live! Ask something fun!
+https://blorplr.herokuapp.com/
 
 ## Known Bugs
 _None yet_
